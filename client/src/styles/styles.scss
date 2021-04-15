@@ -1,4 +1,6 @@
 @import "./base/base.scss";
 @import "./base/settings.scss";
 
-@import "../components/homepage/homepage.styles.scss";
+@import "../pages/homepage/homepage.styles.scss";
+@import '../components/menu-item/menu-item.styles.scss';
+@import '../components/directory/directory.styles.scss';
