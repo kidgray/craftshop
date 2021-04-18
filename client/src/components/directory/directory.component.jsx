@@ -41,8 +41,8 @@ export const Directory = () => {
     return (
         <div className='directory-menu'>
             { 
-                sections.map(section => (
-                    <MenuItem key={section.id} title={section.title.toUpperCase()} imageUrl={section.imageUrl} size={section.size} />
+                sections.map(({id, ...otherSectionProps}) => (
+                    <MenuItem key={id} {...otherSectionProps} />
                 ))
             }
         </div>
