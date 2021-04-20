@@ -1,0 +1,32 @@
+.header {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+
+    .logo {
+      position: relative;
+      right: 1rem;
+      bottom: 2.25rem;
+    }
+
+    .logo-container {
+      height: 100%;
+      width: 7rem;
+      padding: 2.5rem;
+    }
+  
+    .header-options {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  
+      .option {
+        padding: 1rem 1.5rem;
+        font-size: 2.3rem;
+      }
+    }
+}
