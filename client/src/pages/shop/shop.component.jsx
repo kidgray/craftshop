@@ -8,8 +8,6 @@ export const ShopPage = (props) => {
 
     return (
         <div className='shop-page'>
-            SHOP PAGE
-
             {
                 collections.map(({ id, ...otherCollectionProps }) => 
                     <CollectionPreviewReel key={id} {...otherCollectionProps} />
