@@ -4,7 +4,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        sourceMapFilename: 'bundle.js.map'
     },
     module: {
         rules: [
@@ -12,6 +13,11 @@ module.exports = {
                 loader: 'babel-loader',
                 test: /(\.js|\.jsx)$/,
                 exclude: /node_modules/
+            },
+            {
+                test: /(\.js|\.jsx)$/,
+                enforce: 'pre',
+                use: ['source-map-loader']
             },
             {
                 use: [
@@ -27,7 +33,7 @@ module.exports = {
             }
         ]
     },
-    devtool: 'cheap-module-source-map',
+    devtool: 'eval-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
         historyApiFallback: true
