@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import { FormInput } from '../form-input/form-input.component.jsx';
+import { CustomButton } from '../custom-button/custom-button.component.jsx';
+
 export const SignIn = () => {
     const [emailAndPassword, setEmailAndPassword] = useState({
         email: '',
@@ -28,31 +31,29 @@ export const SignIn = () => {
 
     return (
         <div className='sign-in'>
-            <h2 className='header'>I already have an account.</h2>
+            <h2 className='sign-in-header'>I already have an account.</h2>
             <span>Sign in with your email and password</span>
             
             <form className='sign-in-form' onSubmit={handleSubmit}>
-                <input 
-                    className='email-input'
+                <FormInput 
                     type='text'
                     name='email'
+                    label='Email'
                     value={emailAndPassword.email} 
-                    onChange={handleChange} 
+                    handleChange={handleChange} 
                     required 
                 />
-                <label>Email</label>
 
-                <input 
-                    className='password-input' 
+                <FormInput
                     type='password'
                     name='password'
+                    label='Password'
                     value={emailAndPassword.password} 
-                    onChange={handleChange} 
+                    handleChange={handleChange} 
                     required  
                 />
-                <label>Password</label>
 
-                <button className='submit-button' type='submit'>Sign in</button>
+                <CustomButton type='submit'>Sign in</CustomButton>
             </form>
         </div>
     );
