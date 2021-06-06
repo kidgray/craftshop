@@ -53,7 +53,7 @@ export const SignIn = () => {
                     required  
                 />
 
-                <CustomButton type='submit'>Sign in</CustomButton>
+                <CustomButton type='submit'> Sign in </CustomButton>
             </form>
         </div>
     );
